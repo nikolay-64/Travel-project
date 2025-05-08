@@ -1,0 +1,76 @@
+.form {
+    padding: 12px 16px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto;
+
+    align-items: center;
+    gap: 16px;
+
+
+    border-radius: 16px;
+    border: 1px solid rgba(144, 144, 144, 0.30);
+    background: #FFF;
+
+    @include mediaMobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form__label {
+    padding-left: 36px;
+    
+    display: grid;
+    gap: 8px;
+
+    background-image: url('./../img/icons/map.svg');
+    background-position: 0 0; /* x y */
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    &--calendar {
+        background-image: url('./../img/icons/calendar.svg');
+    }
+    
+    span {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+
+.form__input {
+    font-size: 14px;
+    font-weight: 450;
+    line-height: normal;
+
+    &::placeholder {
+        color: var(--text-muted);
+    }
+}
+
+.form__devider {
+    height: 24px;
+    width: 1px;
+    background: var(--text-muted);
+
+    @include mediaMobaleS {
+        display: none;
+    }
+}
+
+.form__btn {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    align-items: center;
+    // gap: 10px;
+
+    border-radius: 10px;
+    background: var(--accent);
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

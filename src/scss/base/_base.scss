@@ -1,0 +1,20 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--page-bg);
+    font-family: var(--font-main);
+	color: var(--text-color);
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img {
+	display: block;
+}
+
+.muted {
+	color: var(--text-muted);
+}

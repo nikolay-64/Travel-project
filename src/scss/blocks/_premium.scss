@@ -1,0 +1,141 @@
+.premium {
+    padding: 60px 0;
+
+    @include mediaLaptop {
+        padding: 40px 0;
+    }
+    
+    @include mediaMobile {
+        padding: 30px 0;
+    }
+}
+
+.premium__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+
+
+    @include mediaTablet {
+        grid-template-columns: repeat(auto-fit, minmax(354px,1fr));
+        gap: 30px;  
+    }
+
+    @include mediaMobile {
+        grid-template-columns: repeat(auto-fit, minmax(395px, 1fr));
+    }
+
+    @include mediaMobaleS {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    @include mediaMobileXS {
+        grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+    }
+}
+
+.premium__desc {
+    width: 520px;
+
+    @include mediaTablet {
+        max-width: 100%;
+    }
+
+    @include mediaMobile {
+        width: 100%;
+    }
+}
+
+.premium__desc-title {
+    margin-bottom: 24px;
+}
+
+.premium__desc-text {
+    margin-bottom: 32px;
+}
+
+.premium__list-wrapper {
+    display: grid;
+    grid-gap: 48px 24px;
+    grid-template-columns: 1fr 1fr;
+
+    @include mediaTablet {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+}
+
+.premium__list {
+    position: relative;
+    max-width: 320px;
+    width: 248px;
+    padding-left: 40px;
+    counter-increment: premium;
+
+    &::before {
+        content: counter(premium) '';
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 10px;
+        left: 0px;
+        top: 0px;   
+        border-radius: 50%;
+        background: var(--accent);
+        color: #fff;
+    }
+
+    @include mediaTablet {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+.premium__list-title {
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 25.2px */
+
+    @include mediaMobile {
+        font-size: 16px;
+    }
+}
+
+li.premium__list-text p {
+    font-size: 16px;
+    font-style: normal;
+}
+
+.premium__img-wpapper {
+    position: relative;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;  
+    row-gap: 24px; 
+    
+    img {
+        border-radius: 18px;
+    }
+
+    @include mediaMobile {
+        display: none;
+    }
+}
+
+.premium__img-hint {
+    position: absolute;
+    top: 96px;
+    left: -60px;
+
+    @include mediaTablet {
+        display: none;
+    }
+}
+
+.premium__img-row {
+    display: flex;
+    column-gap: 24px;
+}

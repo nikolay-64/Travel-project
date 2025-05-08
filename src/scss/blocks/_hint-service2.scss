@@ -1,0 +1,22 @@
+.hint-service2 {
+    display: flex;
+    align-items: center;
+    min-width: 240px;
+    padding: 12px;
+    gap: 16px;
+
+    border-radius: 82px;
+    background: #FFF;
+    box-shadow: 0px 4px 34px 0px rgba(50, 75, 104, 0.17);
+}
+.hint-service2__picture {
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hint-service2__price {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 450;
+}

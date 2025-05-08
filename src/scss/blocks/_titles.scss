@@ -1,0 +1,96 @@
+.title-1 {
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    &--decor {
+        position: relative;
+    }
+
+    &--decor::after {
+        content: "";
+        
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 268px;
+        height: 24px;
+        z-index: -1;
+        
+        background-image: url('./../img/discover/underline.svg');
+        background-repeat: no-repeat;
+
+
+        @include mediaMobile{
+            width: 130px;
+            height: 12px;
+            background-size: contain;
+        }
+
+        // @include mediaMobaleS {
+        //     // left: 95px;
+        //     // bottom: -13%;
+        //     width: 110px;
+        // }
+
+        // @include mediaMobileXS {
+        //     // left: 25%;
+        //     // bottom: -20%;
+        //     width: 100px;
+        // }
+    }
+
+    @include mediaTablet {
+        font-size: 52px;
+    }
+
+    @include mediaMobile {
+        font-size: 32px;
+    }
+
+    @include mediaMobileXS {
+        font-size: 26px;
+    }
+}
+
+.title-2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 120%; /* 48px */
+
+    @include mediaLaptop {
+        font-size: 32px;
+    }
+
+    @include mediaMobile {
+        font-size: 23px;
+    }
+}
+
+.title-3 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @include mediaMobile {
+        font-size: 28px;
+    }
+}
+
+.premium__list-text p, .text {
+    color: var(--text-muted);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 150%;
+
+    p + p {
+        margin-top: 1em;
+    }
+
+    @include mediaMobile {
+        font-size: 16px;
+    }
+}
